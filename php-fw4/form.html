@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<p>//form.html</p>
+<form id="form1" name="form1" method="post" action="form.php">
+  <p>Username: 
+    <input name="username" type="text" id="username" size="10" maxlength="10" />
+    <input name="from" type="hidden" id="from" value="web" />
+  </p>
+  <p>Password: 
+    <input name="password" type="password" id="password" size="20" maxlength="20" />
+  </p>
+  <p>Sex:
+    <label>
+      <input type="radio" name="sex" value="m" id="sex_0" />
+      Male</label>
+    <label>
+      <input type="radio" name="sex" value="f" id="sex_1" />
+    Female</label>
+  </p>
+  <p>Hobby: 
+    <label>
+      <input type="checkbox" name="hobby" value="run" id="hobby_0" />
+      Running</label>
+    <label>
+      <input type="checkbox" name="hobby" value="golf" id="hobby_1" />
+    Golf</label>
+    <label>
+      <input type="checkbox" name="hobby" value="swim" id="hobby_2" />
+    Swimming</label>
+    <label>
+      <input type="checkbox" name="hobby" value="soccer" id="hobby_3" />
+    Soccer</label>
+  </p>
+  <p>Country: 
+    <select name="country" id="country">
+      <option selected="selected"> </option>
+      <option value="hk">Hong Kong</option>
+      <option value="us">United State</option>
+      <option value="tw">Taiwan</option>
+      <option value="cn">China</option>
+      <option value="kr">Korea</option>
+      <option value="jp">Japan</option>
+      <option value="mo">Macau</option>
+    </select>
+  </p>
+  <p>Food: 
+    <select name="food" size="3" multiple="multiple" id="food">
+      <option value="apple" selected="selected">Apple</option>
+      <option value="banana">Banana</option>
+      <option value="cherry">Cherry</option>
+      <option value="durian">Durian</option>
+      <option value="egg">Egg</option>
+      <option value="orange">Orange</option>
+      <option value="pear">Pear</option>
+    </select>
+    <br />
+    <br />
+  </p>
+  <p>Comments: 
+    <textarea name="comments" id="comments" cols="45" rows="5"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="Submit" />
+    <input type="reset" name="reset" id="reset" value="Reset" />
+  </p>
+</form>
+</body>
+</html>

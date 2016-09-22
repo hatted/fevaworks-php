@@ -1,0 +1,11 @@
+number	name	marks
+1	dave	90
+2	john	50
+3	mary	66
+4	sue	72
+5	ada	55
+6	jack	97
+7	jay	82
+8	leo	88
+9	ben	62
+10	cindy	100

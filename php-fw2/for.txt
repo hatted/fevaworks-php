@@ -1,0 +1,38 @@
+for (expression1; condition; expression2){
+	expression3;
+}
+
+expression1 -> initial value of a counter
+condition -> test for each iteration. if it returns false, iteration stops.
+expression2 -> adjusting a counter after each iteration
+expression3 -> execution once in each iteration
+
+
+-------------------------------------------
+for ($num=1; $num<=5; $num++) {
+	echo $num."<br>";
+}
+
+-------------------------------------------
+a) find all numbers from 11-20			//fora.php
+b) find all odd numbers from 1-10		//forb.php
+c) find all even numbers from 1-10		//forc.php
+d) find all multiple of 5 numbers from 1-100	//ford.php
+
+
+-------------------------------------------
+
+<?php
+//list all student name
+for ($student=1; $student<=40; $student++) {
+	echo "$studentname[$student]";
+}
+?>
+
+-------------------------------------------
+try this
+a taxi fee
+$15 start
+2m = $1
+total 20m
+taxi.txt
