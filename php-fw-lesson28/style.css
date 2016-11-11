@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+/* style.css */
+body{
+	background-image:url(Koala.jpg);
+}
+.table{
+	width:80%;
+	background-color:rgba(216,221,255,0.9);
+	border:thick dashed #777EFF;
+	margin:auto;
+	padding:10px;
+	border-radius:5px;
+}
+.table tr:nth-child(even){
+	background-color:rgba(255,216,221,0.5);
+}
+.table tr:nth-child(odd){
+	background-color:rgba(221,255,216,0.5);
+}
