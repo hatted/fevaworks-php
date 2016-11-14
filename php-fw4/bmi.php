@@ -1,7 +1,7 @@
 <?php
 //bmi.php
 $bmi=round($_POST['weight']/$_POST['height']/$_POST['height'], 2);
-echo "Your BMI is $bmi<BR>";
+echo "Your BMI is $bmi <br>";
 
 if ($bmi>25){
 	echo "You are too heavy";
