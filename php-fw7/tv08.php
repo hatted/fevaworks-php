@@ -3,11 +3,10 @@
 class TV{
 	var $plug="UK";
 	var $size;
-	var $color;
 
-	function __construct($new_size, $new_color){
+	function __construct($new_name,$new_size){
+		$this->name=$new_name;
 		$this->size=$new_size;
-		$this->color=$new_color;
 	}
 	function turnOn(){
 		echo "turn on<br>";
@@ -15,34 +14,32 @@ class TV{
 	function turnOff(){
 		echo "turn off<br>";
 	}
+	function volumeUp(){
+		echo "volume up<br>";
+	}
+	function volumeDown(){
+		echo "volume down<br>";
+	}
 	function getPlug(){
 		echo "this plug type is ".$this->plug."<br>";
 	}
-	function getColor(){
-		echo "this color is ".$this->color."<br>";
-	}
 }
 
-class LCD extends TV{
-}
-
-$sony=new TV(42, "black");
+$sony=new TV("Sony",42);
 $sony->turnOn();
 $sony->turnOff();
+$sony->volumeUp();
+$sony->volumeDown();
 $sony->getPlug();
-$sony->getColor();
 echo "this TV size is ".$sony->size."<br>";
+echo "<br>";
 
-$philips=new TV(32, "silver");
+$philips=new TV("Philips",32);
 $philips->turnOn();
 $philips->turnOff();
+$philips->volumeUp();
+$philips->volumeDown();
 $philips->getPlug();
-$philips->getColor();
 echo "this TV size is ".$philips->size."<br>";
-
-$samsung=new LCD();
-$samsung->turnOn();
-$samsung->turnOff();
-$samsung->getPlug();
-$samsung->getColor();
+echo "<br>";
 ?>

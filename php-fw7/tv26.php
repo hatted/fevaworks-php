@@ -32,8 +32,28 @@ class TV{
 	function getColor(){
 		echo "this color is ".$this->color."<br>";
 	}
+	static function insurance(){
+		echo "insurance cover $1<br>";
+	}
 }
 
+class LCD extends TV{
+	function dolbyOn(){
+		echo "dolby is on<br>";
+	}
+	function dolbyOff(){
+		echo "dolby is off<br>";
+	}
+	function timeroff(){
+		echo "in 30 min, it will ";
+		parent::turnOff();
+	}
+	static function insurance(){
+		echo "insurance cover $2<br>";
+	}
+}
+
+TV::insurance();
 $sony=new TV("Sony",42, "black");
 $sony->getName();
 $sony->turnOn();
@@ -54,5 +74,20 @@ $philips->volumeDown();
 $philips->getPlug();
 $philips->getColor();
 echo "this TV size is ".$philips->size."<br>";
+echo "<br>";
+
+LCD::insurance();
+$samsung=new LCD("Samsung",50, "white");
+$samsung->getName();
+$samsung->turnOn();
+$samsung->turnOff();
+$samsung->volumeUp();
+$samsung->volumeDown();
+$samsung->getPlug();
+$samsung->getColor();
+$samsung->dolbyOn();
+$samsung->dolbyOff();
+$samsung->timeroff();
+echo "this TV size is ".$samsung->size."<br>";
 echo "<br>";
 ?>

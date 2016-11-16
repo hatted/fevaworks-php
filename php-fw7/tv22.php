@@ -1,13 +1,15 @@
 <?php
 //tv.php
 class TV{
-	var $name;
 	var $plug="UK";
+	var $name;
 	var $size;
+	var $color;
 
-	function __construct($new_name,$new_size){
+	function __construct($new_name,$new_size, $new_color){
 		$this->name=$new_name;
 		$this->size=$new_size;
+		$this->color=$new_color;
 	}
 	function getName(){
 		echo "this TV name is ".$this->name."<br>";
@@ -27,25 +29,49 @@ class TV{
 	function getPlug(){
 		echo "this plug type is ".$this->plug."<br>";
 	}
+	function getColor(){
+		echo "this color is ".$this->color."<br>";
+	}
 }
 
-$sony=new TV("Sony",42);
+class LCD extends TV{
+	function dolbyOn(){
+		echo "dolby is on<br>";
+	}
+}
+
+
+$sony=new TV("Sony",42, "black");
 $sony->getName();
 $sony->turnOn();
 $sony->turnOff();
 $sony->volumeUp();
 $sony->volumeDown();
 $sony->getPlug();
+$sony->getColor();
 echo "this TV size is ".$sony->size."<br>";
 echo "<br>";
 
-$philips=new TV("Philips",32);
+$philips=new TV("Philips",32, "silver");
 $philips->getName();
 $philips->turnOn();
 $philips->turnOff();
 $philips->volumeUp();
 $philips->volumeDown();
 $philips->getPlug();
+$philips->getColor();
 echo "this TV size is ".$philips->size."<br>";
+echo "<br>";
+
+$samsung=new LCD("Samsung",50, "white");
+$samsung->getName();
+$samsung->turnOn();
+$samsung->turnOff();
+$samsung->volumeUp();
+$samsung->volumeDown();
+$samsung->getPlug();
+$samsung->getColor();
+$samsung->dolbyOn();
+echo "this TV size is ".$samsung->size."<br>";
 echo "<br>";
 ?>

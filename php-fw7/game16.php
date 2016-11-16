@@ -1,9 +1,10 @@
 <?php
-//enemy.php
+//game.php
 class Character{
 	private $name;
 	private $hp;
 	public $attack;
+	
 	function __construct($name, $hp, $attack){
 		$this->name=$name;
 		$this->hp=$hp;
@@ -18,40 +19,41 @@ class Character{
 	function getAttack(){
 		echo "ATTACK: ".$this->attack."<br>";
 	}
-	function hit($hitpoint){
-	    echo $this->name." OLD HP: ".$this->hp."<br>";
-		$this->hp-=$hitpoint;
+	function hit($hit){
+		echo $this->name." OLD HP: ".$this->hp."<br>";
+		$this->hp-=$hit;
 		echo $this->name." NEW HP: ".$this->hp."<br>";
 		if ($this->hp<=0){
-			echo $this->name." is dead. xo<br><br>";
+			echo $this->name." is dead. XO<br><br>";
 		}
 	}
 }
+
 class Enemy extends Character{
 	function alert(){
 		echo "Enemy is coming<br><br>";
 	}
 	function fireAttack(){
-		$hitpoint=$this->attack*2;
-		echo "FIRE ATTACK: ".$hitpoint."<br>";
-		return $hitpoint;
+		$hit=$this->attack*2;
+		echo "FIRE ATTACK: ".$hit."<br>";
+		return $hit;
 	}
 }
-class Dragon extends Enemy{
+class Boss extends Enemy{
 	function iceAttack(){
-		echo "FREEZING...<br>";
-		return $this->attack*3;
+		$hit=$this->attack*3;
+		echo "ICE ATTACK: ".$hit."<br>";
+		return $hit;
 	}
 }
 
-
-$hero=new Character("Raymond",100,80);
+$hero=new Character("Raymond", 100, 80);
 $hero->getName();
 $hero->getHp();
 $hero->getAttack();
 echo "<br>";
 
-$pig=new Enemy("Pig",10,9);
+$pig=new Enemy("Pig", 10, 9);
 $pig->getName();
 $pig->getHp();
 $pig->getAttack();
@@ -59,25 +61,16 @@ $pig->alert();
 
 $hero->hit($pig->attack);
 $pig->hit($hero->attack);
-echo "<br>";
 
-$cow=new Enemy("Cow",20,19);
-$cow->getName();
-$cow->getHp();
-$cow->getAttack();
-$cow->alert();
 
-$hero->hit($cow->fireAttack());
-$cow->hit($hero->attack);
-echo "<br>";
+$wolf=new Enemy("Wolf", 20, 18);
+$wolf->getName();
+$wolf->getHp();
+$wolf->getAttack();
+$wolf->alert();
 
-$reddragon=new Dragon("Dragon",50,30);
-$reddragon->getName();
-$reddragon->getHp();
-$reddragon->getAttack();
-$reddragon->alert();
+$hero->hit($wolf->fireAttack());
+$wolf->hit($hero->attack);
 
-$hero->hit($reddragon->iceAttack());
-echo "<br>";
 
 ?>
