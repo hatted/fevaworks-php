@@ -19,17 +19,17 @@ class TV{
 	function getPlug(){
 		echo "this plug type is ".$this->plug."<br>";
 	}
+	function getColor(){
+		echo "this color is ".$this->color."<br>";
+	}
 	function getVoltage(){
-			echo $this->voltage."V<br>";
+			echo $this->voltage."<br>";
 	}
 	function setVoltage($new_voltage){
 		$this->voltage=$new_voltage;
 	}
 }
 class LCD extends TV{
-	function __construct($new_size, $new_color){
-		parent::__construct($new_size, $new_color);
-	}
 	function dolbyOn(){
 		echo "dolby is on<br>";
 	}
@@ -47,31 +47,31 @@ $sony->turnOn();
 $sony->turnOff();
 $sony->plug="CN";
 $sony->getPlug();
+$sony->getColor();
 echo "this TV size is ".$sony->size."<br>";
-echo "this TV color is ".$sony->color."<br>";
-//$sony->voltage=120;
+//$sony->voltage=110;
 $sony->getVoltage();
-$sony->setVoltage(120);
+$sony->setVoltage(110);
 $sony->getVoltage();
 echo "<br>";
 
-$philips=new TV(32, "black");
+$philips=new TV(32, "silver");
 $philips->turnOn();
 $philips->turnOff();
 $philips->getPlug();
+$philips->getColor();
 echo "this TV size is ".$philips->size."<br>";
-echo "this TV color is ".$philips->color."<br>";
 echo "<br>";
 
-$samsung=new LCD(50, 10000);
+$samsung=new LCD(50, "white");
 $samsung->turnOn();
 $samsung->turnOff();
 $samsung->getPlug();
+$samsung->getColor();
 $samsung->dolbyOn();
 $samsung->dolbyOff();
 $samsung->timeroff();
 echo "this TV size is ".$samsung->size."<br>";
-echo "this TV color is ".$samsung->color."<br>";
 echo "<br>";
 
 

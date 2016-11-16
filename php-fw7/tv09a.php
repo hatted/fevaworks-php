@@ -23,16 +23,6 @@ class TV{
 	}
 }
 class LCD extends TV{
-	function dolbyOn(){
-		echo "dolby is on<br>";
-	}
-	function dolbyOff(){
-		echo "dolby is off<br>";
-	}
-	function timeroff(){
-		echo "in 30 min, ";
-		parent::turnOff();
-	}
 }
 
 $sony=new TV(42, "black");
@@ -61,5 +51,7 @@ $samsung->dolbyOff();
 $samsung->timeroff();
 echo "this TV size is ".$samsung->size."<br>";
 echo "<br>";
+
+LCD::insurance();
 
 ?>

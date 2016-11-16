@@ -11,7 +11,7 @@ class TV{
 		echo "turn on<br>";
 	}
 	function turnOff(){
-		echo "turn on<br>";
+		echo "turn off<br>";
 	}
 	function getPlug(){
 		echo "this plug type is ".$this->plug."<br>";
