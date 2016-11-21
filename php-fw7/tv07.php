@@ -39,13 +39,4 @@ $sony->getPlug();
 echo "this TV size is ".$sony->size."<br>";
 echo "<br>";
 
-$philips=new TV("Philips",32);
-$philips->getName();
-$philips->turnOn();
-$philips->turnOff();
-$philips->volumeUp();
-$philips->volumeDown();
-$philips->getPlug();
-echo "this TV size is ".$philips->size."<br>";
-echo "<br>";
 ?>

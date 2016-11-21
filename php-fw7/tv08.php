@@ -1,6 +1,7 @@
 <?php
 //tv.php
 class TV{
+	var $name;
 	var $plug="UK";
 	var $size;
 

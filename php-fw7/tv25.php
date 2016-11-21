@@ -48,9 +48,6 @@ class LCD extends TV{
 		echo "in 30 min, it will ";
 		parent::turnOff();
 	}
-	static function insurance(){
-		echo "insurance cover $2<br>";
-	}
 }
 
 TV::insurance();

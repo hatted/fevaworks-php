@@ -37,11 +37,13 @@ $hero=new Character("Raymond", 100, 80);
 $hero->getName();
 $hero->getHp();
 $hero->getAttack();
+echo "<br>";
 
 $pig=new Enemy("Pig", 10, 9);
 $pig->getName();
 $pig->getHp();
 $pig->getAttack();
+echo "<br>";
 
 
 

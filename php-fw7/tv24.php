@@ -41,7 +41,7 @@ class LCD extends TV{
 	function dolbyOff(){
 		echo "dolby is off<br>";
 	}
-	function timeroff(){
+	function timerOff(){
 		echo "in 30 min, it will ";
 		parent::turnOff();
 	}
@@ -80,7 +80,7 @@ $samsung->getPlug();
 $samsung->getColor();
 $samsung->dolbyOn();
 $samsung->dolbyOff();
-$samsung->timeroff();
+$samsung->timerOff();
 echo "this TV size is ".$samsung->size."<br>";
 echo "<br>";
 ?>
