@@ -9,7 +9,7 @@ $mysqli = new mysqli($db_host, $db_username, $db_password, $db_database);
 if ($mysqli->connect_errno>0) {
 	die("Connect failed: ". $mysqli->connect_error."<br>");
 }else{
-	print_r($mysqli);
+	//print_r($mysqli);
 }
 
 ?>
