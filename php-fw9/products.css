@@ -1,0 +1,33 @@
+@charset "utf-8";
+.products_list {
+	background-color: #FFF;
+}
+.product {
+	border: 1px solid #CCC;
+	box-shadow: 1px 1px 1px 1px #666;
+	display: inline-block;
+	background-color: #EEE;
+	width: 200px;
+	-webkit-box-shadow: 2px 2px 1px 1px #666;
+}
+.product_image  {
+    text-align: center;
+}
+.product_name {
+    text-align: center;
+}
+
+.price_o{
+	text-decoration:line-through;
+	font-size:0.8em;
+	color:#F00;
+}
+
+
+
+
+
+
+
+
+
