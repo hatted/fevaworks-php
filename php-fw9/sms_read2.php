@@ -34,7 +34,6 @@ foreach($recordset as $record){
     <?php } ?>
   </tbody>
 </table>
-<p><a href="sms_readall.php">Readall</a></p>
 </body>
 </html>
 <?php

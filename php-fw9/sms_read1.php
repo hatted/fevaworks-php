@@ -9,7 +9,7 @@
 <body>
 <?php
 //sms_read.php
-$query="SELECT * FROM `sms` WHERE id=".$_GET['id'];
+$query="SELECT * FROM `sms` WHERE id=3";
 $recordset=$mysqli->query($query);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>
@@ -34,7 +34,6 @@ foreach($recordset as $record){
     <?php } ?>
   </tbody>
 </table>
-<p><a href="sms_readall.php">Readall</a></p>
 </body>
 </html>
 <?php

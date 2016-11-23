@@ -10,10 +10,7 @@
 <p>
   <?php
 //sms_create.php
-date_default_timezone_set('Asia/Hong_Kong');
-$createdate=date("Y-m-d H:i:s");
-
-$query="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, '".$_POST['message']."', '$createdate')";
+$query="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, 'test', '0000-00-00 00:00:00')";
 $result=$mysqli->query($query);
 if($result){
 	echo "Insert Successfully";
@@ -23,7 +20,7 @@ if($result){
 ?>
   
 </p>
-<p><a href="sms_readall.php">Readall</a></p>
+<p>&nbsp;</p>
 </body>
 </html>
 <?php

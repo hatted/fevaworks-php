@@ -8,33 +8,32 @@
 
 <body>
 <?php
-//sms_read.php
-$query="SELECT * FROM `sms` WHERE id=".$_GET['id'];
+//sms_readall.php
+$query="SELECT * FROM `sms`";
 $recordset=$mysqli->query($query);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>
 
+
 <table width="800" border="1">
   <tbody>
+    <tr>
+      <td>id</td>
+      <td>message</td>
+      <td>createdate</td>
+    </tr>
 <?php
 foreach($recordset as $record){
 ?>
     <tr>
-      <td>id</td>
-      <td><?php echo $record['id']; ?></td>
-    </tr>
-    <tr>
-      <td>message</td>
+      <td><a href="sms_read.php?id=<?php echo $record['id']; ?>"><?php echo $record['id']; ?></a></td>
       <td><?php echo $record['message']; ?></td>
-    </tr>
-    <tr>
-      <td>createdate</td>
       <td><?php echo $record['createdate']; ?></td>
     </tr>
     <?php } ?>
   </tbody>
 </table>
-<p><a href="sms_readall.php">Readall</a></p>
+<p><a href="sms_create.html">Create</a></p>
 </body>
 </html>
 <?php
