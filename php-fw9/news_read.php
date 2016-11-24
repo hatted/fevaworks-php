@@ -9,35 +9,46 @@
 <body>
 <?php
 //news_read.php
-$query="SELECT * FROM `news` WHERE id=".$_GET['id'];
-$recordset=$mysqli->query($query);
-mysqli_fetch_all($recordset, MYSQLI_ASSOC);
+$id = $mysqli->real_escape_string($_GET['id']);
+if (!empty($id)){
+  $query="SELECT * FROM `news` WHERE id=".$id;
+  //echo $query;
+  $recordset=$mysqli->query($query);
+  //mysqli_fetch_all($recordset, MYSQLI_ASSOC);
+  if ($recordset){
+  ?>
+
+    <table width="800" border="1">
+      <tbody>
+    <?php
+    while ($record=$recordset->fetch_assoc()){
+    //foreach($recordset as $record){
+    ?>
+        <tr>
+          <td>id</td>
+          <td><?php echo $record['id']; ?></td>
+        </tr>
+        <tr>
+          <td>subject</td>
+          <td><?php echo $record['subject']; ?></td>
+        </tr>
+        <tr>
+          <td>description</td>
+          <td><?php echo $record['description']; ?></td>
+        </tr>
+        <tr>
+          <td>createdate</td>
+          <td><?php echo $record['createdate']; ?></td>
+        </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+
+  <?php
+  }
+}
 ?>
 
-<table width="800" border="1">
-  <tbody>
-<?php
-foreach($recordset as $record){
-?>
-    <tr>
-      <td>id</td>
-      <td><?php echo $record['id']; ?></td>
-    </tr>
-    <tr>
-      <td>subject</td>
-      <td><?php echo $record['subject']; ?></td>
-    </tr>
-    <tr>
-      <td>description</td>
-      <td><?php echo $record['description']; ?></td>
-    </tr>
-    <tr>
-      <td>createdate</td>
-      <td><?php echo $record['createdate']; ?></td>
-    </tr>
-    <?php } ?>
-  </tbody>
-</table>
 <p><a href="news_readall.php">Readall</a></p>
 </body>
 </html>

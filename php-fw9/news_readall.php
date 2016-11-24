@@ -11,9 +11,6 @@
 //news_readall.php
 $query="SELECT * FROM `news` ORDER BY `news`.`id` DESC";
 $recordset=$mysqli->query($query);
-echo "a";
-print_r($recordset);
-echo "b";
 //mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>
 
@@ -31,7 +28,7 @@ echo "b";
 <?php
 //foreach($recordset as $record){
 
-while ($record=$recordset->fetch_array(MYSQLI_ASSOC)){
+while ($record=$recordset->fetch_assoc()){
 //while ($record=mysqli_fetch_assoc($recordset)){
 ?>
     <tr>
