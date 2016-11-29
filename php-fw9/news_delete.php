@@ -47,6 +47,7 @@ if (!empty($id)){
       </tbody>
     </table>
   <?php }
+}
  ?>
 <p><a href="news_readall.php">Readall</a></p>
 </body>
