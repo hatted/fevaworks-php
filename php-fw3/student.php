@@ -28,8 +28,8 @@ $mark[10]=100;
 
 //print names and marks
 for ($i=1; $i<=10; $i++) {
-	echo "$name[$i] ";
-	echo "$mark[$i]";
+	echo "$name[$i]  ";
+	echo "$mark[$i]  ";
 	echo "<br>";
 }
 
@@ -60,7 +60,7 @@ if ($mark[$i]==100) {
 //print out who are fail.
 for ($i=1; $i<=10; $i++) {
 	if ($mark[$i]<60) {
-		echo "$name[$i]";
+		echo "$name[$i]  ";
 	}
 }
 
@@ -108,6 +108,7 @@ echo "lowest mark is $lowestmark";
 
 //find average
 $totalmark=array_sum($mark);
-$average=$totalmark/sizeof($mark);
+$countmark=count($mark);
+$average=$totalmark/$countmark;
 echo "Average is $average";
 ?>

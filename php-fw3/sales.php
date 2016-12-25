@@ -32,6 +32,12 @@ for ($i=10; $i>=1; $i--) {
 	echo "<br>";
 }
 
+
+
+
+
+
+
 $maximum=max($sales);
 echo "highest sales is $maximum";
 
@@ -40,27 +46,53 @@ echo "lowest sales is $minimum";
 
 //find average
 $totalsales=array_sum($sales);
-$average=$totalsales/sizeof($sales);
+$countsales=count($sales);
+$average=$totalsales/$countsales;
 echo "Average is $average";
 
 $range=$maximum-$minimum;
 echo "Range is $range";
 
 
+
+
+
+
+
+//find total number of student more than 70
+$total300=0;
 for ($i=1; $i<=10; $i++) {
-	if ($sales[$i]<30){
+	if ($sales[$i]>300) {
+		$total300++;
+	}
+}
+echo "There are $total300 people get more than 300 sales";
+
+
+
+
+
+
+
+for ($i=1; $i<=10; $i++) {
+	if ($sales[$i]<300){
 		echo $name[$i];
 		echo "<br>";
 	}
 }
 
 
+
+
+
+
 for ($i=1; $i<=10; $i++) {
-	if ($sales[$i]<60) {
-		$salary=$sales[$i]/2;
+	if ($sales[$i]<300) {
+		$salary[$i]=$sales[$i]/2;
 	} else {
-		$salary=$sales[$i]*0.6;
+		$salary[$i]=$sales[$i]*0.6;
 	}
-	echo $name[$i]." ".$salary;
+	echo $name[$i]." ".$salary[$i];
+	echo "<br>";
 }
 ?>
