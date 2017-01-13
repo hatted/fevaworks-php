@@ -4,6 +4,7 @@ class TV{
 	var $plug="UK";
 	var $size;
 	var $color;
+	public static $madeIn="China";
 
 	function __construct($new_size, $new_color){
 		$this->size=$new_size;
@@ -21,8 +22,24 @@ class TV{
 	function getColor(){
 		echo "this color is ".$this->color."<br>";
 	}
+	function getVoltage(){
+			echo $this->voltage."V<br>";
+	}
+	function getRepair(){
+			echo "Repaired ".$this->repair." times<br>";
+	}
 }
 class LCD extends TV{
+	function dolbyOn(){
+		echo "dolby is on<br>";
+	}
+	function dolbyOff(){
+		echo "dolby is off<br>";
+	}
+	public function timeroff(){
+		echo "in 30 min, ";
+		parent::turnOff();
+	}
 }
 
 $sony=new TV(42, "black");
@@ -52,6 +69,6 @@ $samsung->timeroff();
 echo "this TV size is ".$samsung->size."<br>";
 echo "<br>";
 
-LCD::insurance();
+echo "made in: ".TV::$madeIn;
 
 ?>
