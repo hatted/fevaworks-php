@@ -7,7 +7,7 @@
 
 <body>
 <?php
-//function2b.php
+//function4.php
 
 $MIN_YEAR = 1891;
 $MAX_YEAR = 2100;
