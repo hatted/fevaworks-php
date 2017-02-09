@@ -294,11 +294,10 @@ class Lunar {
 date_default_timezone_set('Asia/Hong_Kong');
 
 $lunar = new Lunar();
-$result = $lunar->convertSolarToLunar(2016,11,15);
+$result = $lunar->convertSolarToLunar(2017,2,9);
 print_r($result);
 
-$year=$lunar->getLunarYearName(2016);
-echo $year;
+
 
 ?>
 
