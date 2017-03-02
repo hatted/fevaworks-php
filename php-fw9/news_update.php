@@ -13,7 +13,7 @@
 //news_update.php
 $id = $mysqli->real_escape_string($_GET['id']);
 if (!empty($id)){
-  $query="SELECT * FROM `news` WHERE id=".$id;
+  $sql="SELECT * FROM `news` WHERE id=".$id;
   $recordset=$mysqli->query($query);
   if ($recordset){
     $record=mysqli_fetch_array($recordset, MYSQLI_ASSOC);

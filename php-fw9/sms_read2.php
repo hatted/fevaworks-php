@@ -9,7 +9,7 @@
 <body>
 <?php
 //sms_read.php
-$query="SELECT * FROM `sms` WHERE id=".$_GET['id'];
+$sql="SELECT * FROM `sms` WHERE id=".$_GET['id'];
 $recordset=$mysqli->query($query);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>

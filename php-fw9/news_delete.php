@@ -12,7 +12,7 @@
 //if ((!empty($_GET['id'])) && (is_int($_GET['id']))){
 $id = $mysqli->real_escape_string($_GET['id']);
 if (!empty($id)){
-  $query="SELECT * FROM `news` WHERE id=".$_GET['id'];
+  $sql="SELECT * FROM `news` WHERE id=".$_GET['id'];
   //echo $query;
   $recordset=$mysqli->query($query);
   if ($recordset){

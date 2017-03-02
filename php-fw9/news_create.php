@@ -13,7 +13,7 @@
 date_default_timezone_set('Asia/Hong_Kong');
 $createdate=date("Y-m-d H:i:s");
 
-$query="INSERT INTO `news` (`id`, `subject`, `description`, `createdate`) VALUES (NULL, '".$_POST['subject']."', '".$_POST['description']."', '$createdate')";
+$sql="INSERT INTO `news` (`id`, `subject`, `description`, `createdate`) VALUES (NULL, '".$_POST['subject']."', '".$_POST['description']."', '$createdate')";
 $result=$mysqli->query($query);
 if($result){
 	echo "Insert Successfully";

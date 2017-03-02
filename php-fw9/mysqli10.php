@@ -1,7 +1,7 @@
 <?php
 require_once("db.inc.php");
 
-$query="SELECT * FROM test";
+$sql="SELECT * FROM test";
 $recordset=$mysqli->query($query);
 echo "Select returned ".$recordset->num_rows." rows. \n";
 

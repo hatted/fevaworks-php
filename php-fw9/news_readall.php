@@ -9,7 +9,7 @@
 <body>
 <?php
 //news_readall.php
-$query="SELECT * FROM `news` ORDER BY `news`.`id` DESC";
+$sql="SELECT * FROM `news` ORDER BY `news`.`id` DESC";
 $recordset=$mysqli->query($query);
 //mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>

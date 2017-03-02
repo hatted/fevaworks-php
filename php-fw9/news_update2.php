@@ -12,7 +12,7 @@
 date_default_timezone_set('Asia/Hong_Kong');
 $createdate=date("Y-m-d H:i:s");
 
-$query="UPDATE `news` SET `subject` = '".$_POST['subject']."', `description` = '".$_POST['description']."', `createdate` = '$createdate' WHERE `news`.`id` = ".$_POST['id'];
+$sql="UPDATE `news` SET `subject` = '".$_POST['subject']."', `description` = '".$_POST['description']."', `createdate` = '$createdate' WHERE `news`.`id` = ".$_POST['id'];
 $result=$mysqli->query($query);
 if ($result){
 	echo "update successfully";

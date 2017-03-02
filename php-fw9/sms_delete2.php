@@ -9,7 +9,7 @@
 <body>
 <?php
 //sms_delete2.php
-$query="DELETE FROM `sms` WHERE `sms`.`id` = ".$_GET['id'];
+$sql="DELETE FROM `sms` WHERE `sms`.`id` = ".$_GET['id'];
 $result=$mysqli->query($query);
 if ($result){
 	echo "delete successfully";

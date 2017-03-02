@@ -10,7 +10,7 @@
 <body>
 <?php
 //products_readall.php
-$query="SELECT * FROM `products` WHERE `name` LIKE '%".$_GET['search']."%' OR `description` LIKE '%".$_GET['search']."%'  ORDER BY `products`.`id` DESC";
+$sql="SELECT * FROM `products` WHERE `name` LIKE '%".$_GET['search']."%' OR `description` LIKE '%".$_GET['search']."%'  ORDER BY `products`.`id` DESC";
 $recordset=$mysqli->query($query);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>

@@ -11,7 +11,7 @@
 //news_read.php
 $id = $mysqli->real_escape_string($_GET['id']);
 if (!empty($id)){
-  $query="SELECT * FROM `news` WHERE id=".$id;
+  $sql="SELECT * FROM `news` WHERE id=".$id;
   //echo $query;
   $recordset=$mysqli->query($query);
   //mysqli_fetch_all($recordset, MYSQLI_ASSOC);

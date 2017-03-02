@@ -10,7 +10,7 @@
 <p>
   <?php
 //sms_create.php
-$query="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, 'test', '0000-00-00 00:00:00')";
+$sql="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, 'test', '0000-00-00 00:00:00')";
 $result=$mysqli->query($query);
 ?>
   

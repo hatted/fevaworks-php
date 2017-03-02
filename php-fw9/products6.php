@@ -12,7 +12,7 @@
 
 <?php
 //products.php
-$query="SELECT * FROM `products` ORDER BY `products`.`id` DESC";
+$sql="SELECT * FROM `products` ORDER BY `products`.`id` DESC";
 $recordset=$mysqli->query($query);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>

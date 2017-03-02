@@ -10,7 +10,7 @@
 <?php
 //sms_read.php
 $id=$_GET['id'];
-$query="SELECT * FROM `sms` WHERE id=$id";
+$sql="SELECT * FROM `sms` WHERE id=$id";
 $recordset=$mysqli->query($query);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>

@@ -11,7 +11,7 @@ if ($mysqli->connect_errno > 0) {
 	print_r($mysqli);
 }
 
-$query="SELECT * FROM test";
+$sql="SELECT * FROM test";
 if ($recordset=$mysqli->query($query)){
 	echo "Select returned ".$recordset->num_rows." rows. <br />";
 

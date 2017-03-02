@@ -9,7 +9,7 @@
 <body>
 <?php
 //news_delete2.php
-$query="DELETE FROM `news` WHERE `news`.`id` = ".$_GET['id'];
+$sql="DELETE FROM `news` WHERE `news`.`id` = ".$_GET['id'];
 $result=$mysqli->query($query);
 if ($result){
 	echo "delete successfully";

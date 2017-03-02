@@ -11,7 +11,7 @@
 <p>
   <?php
 //sms_update.php
-$query="SELECT * FROM `sms` WHERE id=".$_GET['id'];
+$sql="SELECT * FROM `sms` WHERE id=".$_GET['id'];
 $recordset=$mysqli->query($query);
 $record=mysqli_fetch_array($recordset, MYSQLI_ASSOC);
 ?>

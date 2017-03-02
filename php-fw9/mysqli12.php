@@ -9,7 +9,7 @@ if ($result){
 	echo "Update error<br>";
 }
 
-$query="SELECT * FROM test";
+$sql="SELECT * FROM test";
 $recordset=$mysqli->query($query);
 echo "Select returned ".$recordset->num_rows." rows. \n";
 

@@ -10,7 +10,7 @@
 <body>
 <?php
 //product.php
-$query="SELECT * FROM `products` WHERE id=".$_GET['id'];
+$sql="SELECT * FROM `products` WHERE id=".$_GET['id'];
 $recordset=$mysqli->query($query);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>

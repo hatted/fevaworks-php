@@ -14,7 +14,7 @@ date_default_timezone_set('Asia/Hong_Kong');
 $createdate=date("Y-m-d H:i:s");
 $message=$_POST['message'];
 
-$query="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, '$message', '$createdate')";
+$sql="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, '$message', '$createdate')";
 $result=$mysqli->query($query);
 if($result){
 	echo "Insert Successfully";
