@@ -14,16 +14,16 @@ $name[9]="ben";
 $name[10]="cindy";
 
 //insert saless to array
-$sales[1]=34;
-$sales[2]=12;
-$sales[3]=67;
-$sales[4]=28;
-$sales[5]=94;
-$sales[6]=16;
-$sales[7]=32;
-$sales[8]=84;
-$sales[9]=27;
-$sales[10]=74;
+$sales[1]=341;
+$sales[2]=122;
+$sales[3]=673;
+$sales[4]=284;
+$sales[5]=945;
+$sales[6]=166;
+$sales[7]=327;
+$sales[8]=848;
+$sales[9]=279;
+$sales[10]=740;
 
 //print names and sales
 for ($i=10; $i>=1; $i--) {
