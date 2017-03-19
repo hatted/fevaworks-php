@@ -27,6 +27,7 @@ class TV{
 }
 
 $sony=new TV("Sony",42);
+$sony->getName();
 $sony->turnOn();
 $sony->turnOff();
 $sony->volumeUp();
@@ -36,6 +37,7 @@ echo "this TV size is ".$sony->size."<br>";
 echo "<br>";
 
 $philips=new TV("Philips",32);
+$philips->getName();
 $philips->turnOn();
 $philips->turnOff();
 $philips->volumeUp();
@@ -44,3 +46,9 @@ $philips->getPlug();
 echo "this TV size is ".$philips->size."<br>";
 echo "<br>";
 ?>
+
+
+
+
+
+
