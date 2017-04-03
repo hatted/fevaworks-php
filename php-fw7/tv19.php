@@ -16,7 +16,7 @@ class TV{
 		echo $this->voltage."Volt <br>";
 	}
 	function setVoltage($new_voltage){
-		echo "changed plug<br>";
+		echo "changed voltage<br>";
 		$this->voltage=$new_voltage;
 	}
 	function getName(){

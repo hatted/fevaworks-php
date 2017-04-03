@@ -1,5 +1,5 @@
 <?php
-//sortstudents.php
+//sortstudent.php
 
 //insert names to array
 $name[1]="dave";
@@ -13,6 +13,13 @@ $name[8]="leo";
 $name[9]="ben";
 $name[10]="cindy";
 
+//sort student name
+
+
+//asort student name
+
+
+//////////////////////
 //insert marks to array
 $mark[1]=90;
 $mark[2]=50;
@@ -25,11 +32,4 @@ $mark[8]=88;
 $mark[9]=62;
 $mark[10]=100;
 
-asort($name);
-print_r($name);
-echo "<p>";
-
-sort($name);
-print_r($name);
-echo "<p>";
 ?>

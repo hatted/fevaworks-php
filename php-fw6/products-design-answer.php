@@ -6,11 +6,11 @@
 <head>
 <meta charset="utf-8">
 <title>Products</title>
-<link href="products.css" rel="stylesheet" type="text/css">
+<link href="products-css.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<?php include('header.inc.php'); ?>
+<?php include('products-header.inc.php'); ?>
 <?php include('products-array.inc.php'); ?>
 .products_list>.product>.product_image+.product_name+product_price
 <div class="products_list">
