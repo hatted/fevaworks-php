@@ -10,7 +10,7 @@
 <?php
 //sms_readall.php
 $sql="SELECT * FROM `sms` ORDER BY `sms`.`id` DESC";
-$recordset=$mysqli->query($query);
+$recordset=$mysqli->query($sql);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>
 

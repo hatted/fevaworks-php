@@ -11,7 +11,7 @@
 //sms_read.php
 $id=$_GET['id'];
 $sql="SELECT * FROM `sms` WHERE id=$id";
-$recordset=$mysqli->query($query);
+$recordset=$mysqli->query($sql);
 mysqli_fetch_all($recordset, MYSQLI_ASSOC);
 ?>
 
