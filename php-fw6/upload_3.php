@@ -7,7 +7,7 @@ $acceptable = array(
 	'image/jpeg',
 	'image/jpg'
 );
-if(!in_array($_FILES['uploaded_file']['type'], $acceptable)) {
+if(!in_array($_FILES['fileField']['type'], $acceptable)) {
 	die('Invalid file type.');
 }
 
@@ -18,7 +18,7 @@ if($_FILES['fileField']['size'] >= $maxsize) {
 
 $minsize    = 100000;
 if($_FILES['fileField']['size'] <= $minsize) {
-	die('File too large.');
+	die('File too small.');
 }
 
 

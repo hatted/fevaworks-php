@@ -7,7 +7,7 @@ $acceptable = array(
 	'image/jpeg',
 	'image/jpg'
 );
-if(!in_array($_FILES['uploaded_file']['type'], $acceptable)) {
+if(!in_array($_FILES['fileField']['type'], $acceptable)) {
 	die('Invalid file type.');
 }
 

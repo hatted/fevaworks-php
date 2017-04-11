@@ -6,6 +6,10 @@ $race=array(
 	0 => "subaru", 
 	2 => "BMW"
 );
+$race[3]="honda";
+$race[1]="benz";
+$race[0]="subaru";
+$race[2]="BMW";
 sort($race);
 print_r($race);
 echo "<br>";
