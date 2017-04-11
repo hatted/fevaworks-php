@@ -28,7 +28,7 @@ mysqli_fetch_all($result, MYSQLI_ASSOC);
 foreach($result as $record){
 	?>
     <tr>
-		<td><?php echo $record['id']; ?></td>
+		<td><a href="sms_read.php?id=<?php echo $record['id']; ?>"><?php echo $record['id']; ?></a></td>
       <td><?php echo $record['message']; ?></td>
       <td><?php echo $record['createdate']; ?></td>
     </tr>
@@ -37,7 +37,6 @@ foreach($result as $record){
 ?>
   </tbody>
 </table>
-<p><a href="sms_delete_sql.php?id=<?php echo $record['id']; ?>">Yes, I want to delete.</a></p>
 <p><a href="sms_readall.php">Back to read all</a></p>
 </body>
 </html>

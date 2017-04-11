@@ -37,7 +37,6 @@ foreach($result as $record){
 ?>
   </tbody>
 </table>
-<p><a href="sms_delete_sql.php?id=<?php echo $record['id']; ?>">Yes, I want to delete.</a></p>
 <p><a href="sms_readall.php">Back to read all</a></p>
 </body>
 </html>

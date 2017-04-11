@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 21, 2016 at 06:29 AM
+-- Generation Time: Apr 05, 2017 at 07:42 AM
 -- Server version: 5.7.13-log
 -- PHP Version: 5.6.22
 
@@ -46,11 +46,10 @@ INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES
 (7, 'I am great.', '2016-11-21 00:00:07'),
 (8, 'Great', '2016-11-21 00:00:08'),
 (9, 'Let\'s go dinner', '2016-11-21 00:00:09'),
-(10, 'sure', '2016-11-21 00:00:10'),
 (11, 'What time?', '2016-11-21 00:00:11'),
-(12, '7pm?', '2016-11-21 00:00:12'),
+(12, '8pm?', '2017-04-05 15:38:50'),
 (13, 'sure.  see you tonight', '2016-11-21 00:00:13'),
-(14, 'ok. bye', '2016-11-21 00:00:14');
+(15, 'aaaaa', '2017-04-05 15:38:33');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +69,7 @@ ALTER TABLE `sms`
 -- AUTO_INCREMENT for table `sms`
 --
 ALTER TABLE `sms`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

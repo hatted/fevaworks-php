@@ -1,5 +1,5 @@
 <?php
-//db.inc.php
+//db.php
 $db_hostname="localhost";
 $db_username="root";
 $db_password="password";
@@ -11,3 +11,22 @@ if ($mysqli->connect_errno>0){
 }
 //print_r($mysqli);
 ?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+</body>
+</html>
+<?php
+$mysqli->close();
+?>
+
+
+
+
+
+

@@ -1,4 +1,7 @@
-<?php require_once('db.inc.php'); ?>
+<?php
+//sms_readall.php
+require_once('db.inc.php');
+?>
 <!doctype html>
 <html>
 <head>
@@ -8,15 +11,19 @@
 
 <body>
 <?php
-//sms_readall.php
 $sql="SELECT * FROM `sms`";
-$recordset=$mysqli->query($query);
-mysqli_fetch_all($recordset, MYSQLI_ASSOC);
+$result=$mysqli->query($sql);
+mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
-
 
 </body>
 </html>
 <?php
 $mysqli->close();
 ?>
+
+
+
+
+
+

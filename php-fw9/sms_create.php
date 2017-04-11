@@ -1,4 +1,7 @@
-<?php require_once('db.inc.php'); ?>
+<?php
+//sms_create.php
+require_once('db.inc.php');
+?>
 <!doctype html>
 <html>
 <head>
@@ -7,25 +10,24 @@
 </head>
 
 <body>
-<p>
-  <?php
-//sms_create.php
-date_default_timezone_set('Asia/Hong_Kong');
-$createdate=date("Y-m-d H:i:s");
-
-$sql="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, '".$_POST['message']."', '$createdate')";
-$result=$mysqli->query($query);
-if($result){
-	echo "Insert Successfully";
-}else{
-	echo "Insert error";
-}
-?>
-  
-</p>
-<p><a href="sms_readall.php">Readall</a></p>
+<form action="sms_create_sql.php" method="post" name="form1" id="form1">
+  <p>
+    <label for="message">Message:</label>
+    <textarea name="message" id="message"></textarea>
+  </p>
+  <p>
+    <input type="submit" name="submit" id="submit" value="Submit">
+    <input type="reset" name="reset" id="reset" value="Reset">
+  </p>
+</form>
 </body>
 </html>
 <?php
 $mysqli->close();
 ?>
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 <?php
-//db.php
+//sms_read.php
 require_once('db.inc.php');
 ?>
 <!doctype html>
@@ -10,6 +10,12 @@ require_once('db.inc.php');
 </head>
 
 <body>
+<?php
+$id=$_GET['id'];
+$sql="";
+$result=$mysqli->query($sql);
+?>
+<p><a href="sms_readall.php">Back to read all</a></p>
 </body>
 </html>
 <?php
