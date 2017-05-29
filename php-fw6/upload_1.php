@@ -3,6 +3,7 @@
 $tmpfile=$_FILES["fileField"]["tmp_name"];
 $uploadfile="uploads/".$_FILES["fileField"]["name"];
 
+// check file type
 $acceptable = array(
 	'image/jpeg',
 	'image/jpg'

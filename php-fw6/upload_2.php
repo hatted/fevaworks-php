@@ -3,6 +3,7 @@
 $tmpfile=$_FILES["fileField"]["tmp_name"];
 $uploadfile="uploads/".$_FILES["fileField"]["name"];
 
+// check file type
 $acceptable = array(
 	'image/jpeg',
 	'image/jpg'
@@ -11,6 +12,7 @@ if(!in_array($_FILES['fileField']['type'], $acceptable)) {
 	die('Invalid file type.');
 }
 
+// max file size
 $maxsize    = 500000;
 if($_FILES['fileField']['size'] >= $maxsize) {
 	die('File too large.');

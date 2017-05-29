@@ -6,6 +6,7 @@ for ($i=0; $i<sizeof($prices); $i++) {
 	echo "$prices[$i]";
 	echo "<br>";
 }
+echo "---<br>";
 
 $products=array("honda", "benz", "subaru", "BMW");
 sort($products);
@@ -13,7 +14,6 @@ for ($i=0; $i<sizeof($products); $i++) {
 	echo "$products[$i]";
 	echo "<br>";
 }
-echo "---<br>";
 ?>
 
 

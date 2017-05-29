@@ -2,7 +2,7 @@
 //hitscounter.php
 $counter=fopen('counter.txt','r');
 $hits=fgets($counter);
-echo $hits;
+echo "You are visitor number $hits to this site";
 fclose($counter);
 
 $hits++;
