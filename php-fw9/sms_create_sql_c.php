@@ -1,5 +1,5 @@
 <?php
-//sms_read.php
+//sms_create_sql.php
 require_once('db.inc.php');
 ?>
 <!doctype html>
@@ -11,9 +11,15 @@ require_once('db.inc.php');
 
 <body>
 <?php
-$id=$_GET['id'];
-$sql="";
+$message=$_POST['message'];
+$sql="INSERT INTO `sms` (`id`, `message`, `createdate`) VALUES (NULL, '$message', '$createdate')";
 $result=$mysqli->query($sql);
+	
+if ($result){
+	echo "Insert successfully";
+}else{
+	echo "Insert fail";
+}
 ?>
 <p><a href="sms_readall.php">Back to read all</a></p>
 </body>

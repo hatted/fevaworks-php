@@ -21,6 +21,8 @@ mysqli_fetch_all($result, MYSQLI_ASSOC);
 <table width="600" border="1">
   <tbody>
     <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
       <td>id</td>
       <td>message</td>
       <td>createdate</td>
@@ -29,6 +31,8 @@ mysqli_fetch_all($result, MYSQLI_ASSOC);
 foreach($result as $record){
 	?>
     <tr>
+      <td>update</td>
+      <td>delete</td>
 		<td><a href="sms_read.php?id=<?php echo $record['id']; ?>"><?php echo $record['id']; ?></a></td>
       <td><?php echo $record['message']; ?></td>
       <td><?php echo $record['createdate']; ?></td>

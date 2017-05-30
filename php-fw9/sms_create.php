@@ -13,7 +13,7 @@ require_once('db.inc.php');
 <form action="sms_create_sql.php" method="post" name="form1" id="form1">
   <p>
     <label for="message">Message:</label>
-    <textarea name="message" id="message"></textarea>
+    <textarea name="message" cols="50" rows="5" id="message"></textarea>
   </p>
   <p>
     <input type="submit" name="submit" id="submit" value="Submit">

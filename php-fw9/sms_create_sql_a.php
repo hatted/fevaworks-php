@@ -1,5 +1,5 @@
 <?php
-//sms_read.php
+//sms_create_sql.php
 require_once('db.inc.php');
 ?>
 <!doctype html>
@@ -11,32 +11,10 @@ require_once('db.inc.php');
 
 <body>
 <?php
-$id=$_GET['id'];
-$sql="SELECT * FROM `sms` WHERE `id` = $id";
+$sql="";
 $result=$mysqli->query($sql);
-mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
-<table width="600" border="1">
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>message</td>
-      <td>createdate</td>
-    </tr>
-    <?php
-foreach($result as $record){
-	?>
-    <tr>
-		<td><?php echo $record['id']; ?></td>
-      <td><?php echo $record['message']; ?></td>
-      <td><?php echo $record['createdate']; ?></td>
-    </tr>
-    <?php
-    }
-?>
-  </tbody>
-</table>
 <p><a href="sms_readall.php">Back to read all</a></p>
 </body>
 </html>
