@@ -11,7 +11,7 @@ require_once('db.inc.php');
 
 <body>
 <?php
-$sql="SELECT * FROM `sms`";
+$sql="";
 $result=$mysqli->query($sql);
 mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>

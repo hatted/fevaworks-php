@@ -16,14 +16,6 @@ $result=$mysqli->query($sql);
 mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
-<?php
-foreach($result as $record){
-	echo $record['id'];
-	echo $record['message'];
-	echo $record['createdate'];
-	echo "<br>";
-}
-?>
 </body>
 </html>
 <?php
